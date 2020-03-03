@@ -1,0 +1,167 @@
+    1  sudo apt update
+    2  sudo apt install autoconf gcc make unzip libgd-dev libmcrypt-dev libssl-dev dc snmp libnet-snmp-perl gettext
+    3  cd ~
+    4  curl -L -O https://github.com/NagiosEnterprises/nagioscore/archive/nagios-4.4.4.tar.gz
+    5  tar zxf nagios-4.4.4.tar.gz
+    6  cd nagioscore-nagios-4.4.4
+    7  ./configure --with-httpd-conf=/etc/apache2/sites-enabled
+    8  make all
+    9  sudo make install-groups-users
+   10  sudo make install
+   11  sudo install-daemoninit
+   12  sudo make install-daemoninit
+   13  sudo make install-commandmode
+   14  sudo make install-config
+   15  sudo make install-webconf
+   16  sudo apt install apache
+   17  sudo make install-webconf
+   18  sudo apt install apache
+   19  sudo a2enmod rewrite
+   20  sudo apt-get update
+   21  sudo apt-get install apache2
+   22  sudo make install-webconf
+   23  sudo a2enmod rewrite
+   24  sudo a2enmod cgi
+   25  sudo usermod -a -G naigos www-data
+   26  sudo usermod -a -G nagios www-data
+   27  sudo htpasswd -c /usr/local/nagios/etc/htpasswd.users nagiosadmin
+   28  sudo systemctl restart apache2
+   29  cd ~
+   30  curl -L -O https://nagios-plugins.org/download/nagios-plugins-2.2.1.tar.gz
+   31  tar zxf nagios-plugins-<^>2.2.1<^.tar.gz
+   32  tar zxf nagios-plugins-2.2.1.tar.gz
+   33  cd nagios-plugins-2.2.1
+   34  ./configure
+   35  make
+   36  sudo make install
+   37  cd ~
+   38  curl -L -O https://github.com/NagiosEnterprises/nrpe/releases/download/nrpe-3.2.1/nrpe-3.2.1.tar.gz
+   39  tar zxf nrpe-3.2.1.tar.gz
+   40  cd nrpe-3.2.1
+   41  ./configure
+   42  make check_nrpe
+   43  sudo make install-plugin
+   44  sudo nano /usr/local/nagios/etc/nagios.cfg
+   45  sudo mkdir /usr/local/nagios/etc/servers
+   46  sudo nano /usr/local/nagios/etc/objects/contacts.cfg
+   47  sudo nano /usr/local/agios/etc/objects/commands.cfg
+   48  sudo nano /usr/local/nagios/etc/objects/commands.cfg
+   49  sudo systemctl start nagios
+   50  logout
+   51  nagios
+   52  sudo systemctl start nagios
+   53  nano /usr/local/nagios/bin/nagios
+   54  /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+   55  nano /usr/local/nagios/etc/nagios.cfg
+   56  /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+   57  sudo /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+   58  ipconfig
+   59  ifconfig
+   60  hostname -l
+   61  hostname -I
+   62  hostname
+   63  logout
+   64  sudo systemctl start nagios
+   65  service httpd status
+   66  sudo systemctl start nagios
+   67  ifconfig
+   68  service httpd restart
+   69  sudo service httpd restart
+   70  sudo systcmctl status httpd.service
+   71* sudo systemctl status httpd.servic
+   72  sudo service httpd start
+   73  curl http://localhost/nagios
+   74  df -h /
+   75  /usr/local/nagios/libexec/check_nrpe -H localhost
+   76  /usr/local/nagios/libexec/check_nrpe -H 10.0.2.15
+   77  lsof -i:5556
+   78  /usr/local/nagios/libexec/check_nrpe -H localhost
+   79  /usr/local/nagios/libexec/check_nrpe -H 10.0.2.15
+   80  /usr/local/nagios/libexec/check_nrpe -H 10.0.2.255
+   81  /usr/local/nagios/libexec/check_nrpe -H localhost
+   82  /usr/local/nagios/libexec/check_nrpe -H 127.0.0.1
+   83  sudo systemctl restart apache2
+   84  /usr/local/nagios/libexec/check_nrpe -H 127.0.0.1
+   85  /usr/local/nagios/libexec/check_nrpe -H localhost
+   86  sudo nano /usr/local/nagios/etc/nrpe.cfg
+   87  ifconfig
+   88  /usr/local/nagios/libexec/check_nrpe -H localhost
+   89  nmap
+   90  nmap remote_nrpe_server_ip_address
+   91  cd /tmp/nrpe
+   92  make nrpe
+   93  nmap remote_nrpe_server_ip_address
+   94  /usr/local/nagios/libexec/check_nrpe -H localhost
+   95  ifconfig
+   96  sudo systemctl start nagios
+   97  128.235.250.0
+   98  ping 128.235.250.0
+   99  ping 10.203.197.205
+  100  /usr/local/nagios/libexec/check_nrpe -H 10.203.197.205
+  101  /usr/local/nagios/libexec/check_nrpe -H localhost
+  102  /usr/local/nagios/libexec/check_nrpe -H localhost -4
+  103  /usr/local/nagios/libexec/check_nrpe -H localhost -5666
+  104  /usr/local/nagios/libexec/check_nrpe -H localhost -4
+  105  /usr/local/nagios/libexec/check_nrpe -H localhost -5666
+  106  /usr/local/nagios/libexec/check_nrpe -H 127.0.0.1
+  107  /usr/local/nagios/libexec/check_nrpe -H 127.0.0.1 -4
+  108  ls -la /etc/xinetd.d/nrpe
+  109  service nrpe restart
+  110  /usr/local/nagios/libexec/check_nrpe -H 127.0.0.1 -4
+  111  /usr/local/nagios/libexec/check_nrpe -H localhost -4
+  112  /usr/local/nagios/libexec/check_nrpe -H localhost -500
+  113  /usr/local/nagios/libexec/check_nrpe -H localhost
+  114  users
+  115  groups
+  116  /usr/local/nagios/libexec/check_nrpe -H localhost
+  117  ls sudo nano /usr/local/nagios/etc/servers/
+  118  sudo /usr/local/nagios/etc/servers/
+  119* 
+  120  /usr/local/nagios/libexec/check_nrpe -H localhost
+  121  ping localhost:5666
+  122  ping localhost
+  123  /usr/local/nagios/libexec/check_nrpe -H 127.0.0.1
+  124  lsof -i:5666
+  125  /usr/local/nagios/libexec/check_nrpe -H 127.0.0.1
+  126  /usr/local/nagios/libexec/check_nrpe -H 127.0.0.1 -4
+  127  /usr/local/nagios/libexec/check_nrpe -H localhost
+  128  cd ~
+  129  curl -L -O https://github.com/NagiosEnterprises/nrpe/releases/download/nrpe-3.2.1/nrpe-3.2.1.tar.gz
+  130  tar zxf nrpe-3.2.1.tar.gz
+  131  cd nrpe-3.2.1
+  132  ./configure
+  133  make check_nrpe
+  134  sudo make install-plugin
+  135  /usr/local/nagios/libexec/check_nrpe -H localhost
+  136  sudo nano /usr/local/nagios/etc/nagios.cfg
+  137  sudo nano /usr/local/nagios/etc/objects/commands.cfg
+  138  sudo systemctl start nagios
+  139  sudo systemctl status nagios
+  140  /usr/local/nagios/libexec/check_nrpe -H localhost
+  141  cd ~
+  142  ls
+  143  mkdir git
+  144  cd igt
+  145  git
+  146  cd git
+  147  git copy https://github.com/EricKnudsen256/IT340_Lab2
+  148  git clone https://github.com/EricKnudsen256/IT340_Lab2
+  149  history > VM1history.txt
+  150  git commit -m "vm1history"
+  151  git commit -u origin master
+  152  git init
+  153  cd .git
+  154  git copy https://github.com/EricKnudsen256/IT340_Lab2
+  155  git clone https://github.com/EricKnudsen256/IT340_Lab2
+  156  ls
+  157  history > VM1history.txt
+  158  git commit -m "vm1history"
+  159  git push
+  160  git add -a
+  161  ls
+  162  cd ~
+  163  mkdir Git
+  164  cd Git
+  165  git init
+  166  git pull https://github.com/EricKnudsen256/IT340_Lab2
+  167  history > VM1history.txt
